@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class kdv {
+    public static void main(String[] args) {
+        int n1, n2, select;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Ilk sayiyi giriniz: ");
+        n1 = inp.nextInt();
+
+        System.out.print("Ikinci sayiyi giriniz: ");
+        n2 = inp.nextInt();
+
+        System.out.println(" 1.Toplama\n2.Cikarma\n3.Bolme\n4.Carpma ");
+        System.out.println("Islem seciniz:");
+        select = inp.nextInt();
+
+        switch (select) {
+            case 1:
+                System.out.println("Toplama sonucu: " + (n1 + n2));
+                break;
+            case 2:
+                System.out.println("Cikarma sonucu: " + (n1 - n2));
+                break;
+            case 3:
+                if (n2 != 0) {
+                    System.out.println("Bolme sonucu: " + (n1 / n2));
+                } else {
+                    System.out.println("Payda sifir olamaz. Lutfen gecerli bir islem giriniz!");
+                }
+                break;
+            case 4:
+                System.out.println("Carpma sonucu: " + (n1 * n2));
+                break;
+            default:
+                System.out.println("Gecerli islem giriniz!");
+                break;
+
+            }   
+      } 
+}
